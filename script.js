@@ -1,6 +1,6 @@
 
-let playerSelection = prompt("Enter your election");
-
+//let playerSelection = prompt("Enter your election");
+/*
 const randomSelec = ["a", "rock", "paper", "scissors"];
 let computerSelection;
 function computerPlay() {
@@ -9,7 +9,7 @@ function computerPlay() {
     return computerSelection;
 
 }
-console.log(computerPlay())
+//console.log(computerPlay())
 
 function playRound(playerSelec, computerSelec) {
     if (playerSelec == computerSelec) {
@@ -33,69 +33,56 @@ function playRound(playerSelec, computerSelec) {
 
 
 }
-playRound(playerSelection.toLowerCase(), computerSelection);
+//playRound(playerSelection.toLowerCase(), computerSelection);
 
+function game() {
+    let playerSelection = prompt("Enter your election");
+    console.log(computerPlay());
+    playRound(playerSelection.toLowerCase(), computerSelection);
 
-/*
-let a = "rock";
-let b = "hola";
-if (a == b) {
-    console.log("tie!");
-} else if (a == "rock" && b == "scissors") {
-    console.log("You Win! Rock beats scissors");
-} else if (a == "paper" && b == "rock") {
-    console.log("You Win! paper beats rock");
-} else if (a == "scissors" && b == "paper") {
-    console.log("You Win! scissors beats paper");
-} else if (a == "rock" && b == "paper") {
-    console.log("You Lose! paper beats rock");
-} else if (a == "paper" && b == "scissors") {
-    console.log("You Lose! scissors beats paper");
-} else if (a == "scissors" && b == "rock") {
-    console.log("You Lose! rock beats scissors");
-} else {
-    console.log("Something went horribly wrong...");
+    playerSelection = prompt("Enter your election");
+    console.log(computerPlay());
+    playRound(playerSelection.toLowerCase(), computerSelection);
+
+    playerSelection = prompt("Enter your election");
+    console.log(computerPlay());
+    playRound(playerSelection.toLowerCase(), computerSelection);
+
 }
+
+console.log(game());
 
 */
 
 
-
-
-
-/*
-let a = "paper";
-let b = "rock";
-switch (a, b) {
-    case "rock", "rock":
-        console.log("tie!");
-        break;
-    case "scissors", "scissors":
-        console.log("tie!");
-        break;
-    case "paper", "paper":
-        console.log("tie!");
-        break;
-    case "rock", "scissors":
-        console.log("You Win! rock beats scissors");
-        break;
-    case "paper", "rock":
-        console.log("You Win! paper beats rock");
-        break;
-    case "scissors" && "paper":
-        console.log("You Win! scissors beats paper");
-        break;
-    case "rock" && "paper":
-        console.log("You Lose! paper beats rock");
-        break;
-    case "paper" && "scissors":
-        console.log("You Lose! scissors beats paper");
-        break;
-    case "scissors" && "rock":
-        console.log("You Lose! rock beats scissors");
-        break;
-    default:
-        console.log("Something went horribly wrong...");
+function prueba() {
+    let strPrueba = "You Lose! scissors beats paper";
+    let scorePrueba = strPrueba.indexOf("Win");
+    return scorePrueba;
 }
+//console.log(prueba());
 
-*/
+let player = 0;
+let computer = 0;
+function score(playRound) {
+
+    if (playRound >= 0) {
+        player = player + 1;
+    } else {
+        computer = computer + 1;
+    }
+    console.log("Player:" + player);
+    console.log("Computer:" + computer);
+}
+console.log(score(prueba()));
+
+
+
+
+
+
+
+
+
+
+

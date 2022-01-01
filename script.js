@@ -37,26 +37,19 @@ function playRound(playerSelec, computerSelec) {
 
 function game() {
     let playerSelection = prompt("Enter your election");
-    console.log(computerPlay());
+    computerPlay();
     playRound(playerSelection.toLowerCase(), computerSelection);
-
-    playerSelection = prompt("Enter your election");
-    console.log(computerPlay());
-    playRound(playerSelection.toLowerCase(), computerSelection);
-
-    playerSelection = prompt("Enter your election");
-    console.log(computerPlay());
-    playRound(playerSelection.toLowerCase(), computerSelection);
-
 }
 
-console.log(game());
+game();
+game();
+game();
 
 */
 
 
 function prueba() {
-    let strPrueba = "You Lose! scissors beats paper";
+    let strPrueba = prompt("ingresa Win o Lose");
     let scorePrueba = strPrueba.indexOf("Win");
     return scorePrueba;
 }
@@ -65,16 +58,20 @@ function prueba() {
 let player = 0;
 let computer = 0;
 function score(playRound) {
+    //let strPrueba = prompt("ingresa Win o Lose");
 
     if (playRound >= 0) {
-        player = player + 1;
+        player++;
     } else {
-        computer = computer + 1;
+        computer++;
     }
     console.log("Player:" + player);
     console.log("Computer:" + computer);
 }
-console.log(score(prueba()));
+score(prueba());
+score(prueba());
+score(prueba());
+
 
 
 

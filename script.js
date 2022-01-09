@@ -1,6 +1,6 @@
 
 //let playerSelection = prompt("Enter your election");
-/*
+
 const randomSelec = ["a", "rock", "paper", "scissors"];
 let computerSelection;
 function computerPlay() {
@@ -13,69 +13,78 @@ function computerPlay() {
 
 function playRound(playerSelec, computerSelec) {
     if (playerSelec == computerSelec) {
-        console.log("tie!");
+        return console.log("tie!");
     } else if (playerSelec == "rock" && computerSelec == "scissors") {
-        console.log("You Win! Rock beats scissors");
+        return console.log("You Win! Rock beats scissors");
     } else if (playerSelec == "paper" && computerSelec == "rock") {
-        console.log("You Win! paper beats rock");
+        return console.log("You Win! paper beats rock");
     } else if (playerSelec == "scissors" && computerSelec == "paper") {
-        console.log("You Win! scissors beats paper");
+        return console.log("You Win! scissors beats paper");
     } else if (playerSelec == "rock" && computerSelec == "paper") {
-        console.log("You Lose! paper beats rock");
+        return console.log("You Lose! paper beats rock");
     } else if (playerSelec == "paper" && computerSelec == "scissors") {
-        console.log("You Lose! scissors beats paper");
+        return console.log("You Lose! scissors beats paper");
     } else if (playerSelec == "scissors" && computerSelec == "rock") {
-        console.log("You Lose! rock beats scissors");
+        return console.log("You Lose! rock beats scissors");
     } else {
-        console.log("Something went horribly wrong...");
+        return console.log("Something went horribly wrong...");
     }
 
 
 
 }
 //playRound(playerSelection.toLowerCase(), computerSelection);
+let player = 0;
+let computer = 0;
+
+function nashe(playerSelec, computerSelec){
+    if (playerSelec == computerSelec) {
+        
+    } else if (playerSelec == "rock" && computerSelec == "scissors") {
+        player++;
+    } else if (playerSelec == "paper" && computerSelec == "rock") {
+        player++;
+    } else if (playerSelec == "scissors" && computerSelec == "paper") {
+        player++;
+    } else if (playerSelec == "rock" && computerSelec == "paper") {
+        computer++;
+    } else if (playerSelec == "paper" && computerSelec == "scissors") {
+        computer++;
+    } else if (playerSelec == "scissors" && computerSelec == "rock") {
+        computer++;
+    }else {
+        return console.log("Something went horribly wrong...");
+    }
+    console.log("Player:" + player);
+    console.log("Computer:" + computer);
+
+    
+}
+function resultGame(){
+    if(player>computer){
+        console.log("You Win!😎")
+    }else if(computer>player){
+        console.log("You Lose!😥")
+    }else{
+        console.log("Tie!😯")
+    }
+}
+
+
 
 function game() {
     let playerSelection = prompt("Enter your election");
     computerPlay();
     playRound(playerSelection.toLowerCase(), computerSelection);
+    nashe(playerSelection.toLowerCase(), computerSelection);
 }
 
 game();
 game();
 game();
-
-*/
-
-
-function prueba() {
-    let strPrueba = prompt("ingresa Win o Lose");
-    let scorePrueba = strPrueba.indexOf("Win");
-    return scorePrueba;
-}
-//console.log(prueba());
-
-let player = 0;
-let computer = 0;
-function score(playRound) {
-    //let strPrueba = prompt("ingresa Win o Lose");
-
-    if (playRound >= 0) {
-        player++;
-    } else {
-        computer++;
-    }
-    console.log("Player:" + player);
-    console.log("Computer:" + computer);
-}
-score(prueba());
-score(prueba());
-score(prueba());
-
-
-
-
-
+game();
+game();
+resultGame();
 
 
 

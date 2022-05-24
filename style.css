@@ -1,0 +1,293 @@
+
+:root{
+    --background:#000000;
+    --base: #150050;
+    --banckgroundDiv: #3F0071;
+    --radius: 30px;
+    --backgroundSelects: #610094;
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+body{
+    background-color: var(--base);
+    font-family: 'Roboto', sans-serif;
+    
+}
+p{
+    color: #ffffff;
+    font-size: 48px;
+}
+
+/* Titulo */
+.containerTitle{
+    width: 1200px;
+    height: 80px;
+    background-color: var(--banckgroundDiv);
+    border-radius: var(--radius);
+    text-align: center;
+    line-height: 80px;
+    margin: 33px 0px 0px 0px;
+    
+}
+.title{
+    color: #ffffff;
+    transition: color .4s ease .0s;
+}
+
+
+
+
+/* Puntos */
+.containerPts{
+    width: 1200px;
+    height: 253px;
+    background-color: var(--banckgroundDiv);
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0px 0px 33px 0px;
+
+}
+
+.containerIcons{
+    max-width: 150px;
+    max-height: 70px;
+    width: 150px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: var(--backgroundSelects);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.result{
+    color: #ffffff;
+    transition: textContent .4s ease .0s;
+    
+    
+}
+/*
+@keyframes colorWin {
+    0% {
+      color: var(--banckgroundDiv); }
+    
+    100% {
+      color: #0CA445} 
+      }
+
+    @keyframes colorLose {
+        0% {
+          color: var(--banckgroundDiv); }
+      
+        100% {
+          color: #AD0900} 
+          }
+*/
+.containerResult{
+    margin: 0px 283px 0px 283px;
+    max-width: 211px;
+    width: 211px;
+    
+}
+
+@keyframes transitionGhost{
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+@keyframes transitionNoGhost{
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.pruebaanashe{
+    opacity: 0%;
+}
+.ghost{
+     display: none; 
+    
+}
+.noGhost{
+    display: block;
+   
+}
+
+/* Container VS */
+.containerVs{
+    width: 1200px;
+    height: 350px;
+    background-color: var(--banckgroundDiv);
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.boxVs{
+    border-radius: 50px;
+    
+    max-width: 81px;
+    max-height: 81px;
+    width: 81px;
+    height: 81px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 162px 0px 160px;
+    outline-style: solid;
+    outline-width: 8px;
+    outline-color: #ffffff;
+    transition: outline-color .4s ease .0s;
+}
+/* color win : #0CA445*/
+/* color lose: #AD0900 */
+/* color empate: #D096FF */
+
+/* container Elec usuario */
+.containerElecUsr{
+    max-width: 300px;
+    max-height: 750px;
+    width: 300px;
+    height: 750px;
+    background-color: var(--banckgroundDiv);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0px 33px 0px 0px;
+}
+
+
+/* container elec Pc */
+.containerElecPc{
+    max-width: 300px;
+    max-height: 750px;
+    width: 300px;
+    height: 750px;
+    background-color: var(--banckgroundDiv);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0px 0px 0px 33px;
+
+}
+
+.boxPc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: var(--backgroundSelects);
+    border-radius: var(--radius);
+}
+
+/* Boxes de elecciones */
+.boxSelections{
+    width: 150px;
+    height: 150px;
+    background-color: var(--backgroundSelects);
+    border-radius: var(--radius);
+    border-style: none;
+    cursor: pointer;
+    
+}
+.box2{
+    margin: 103px 0px 103px 0px;
+}
+
+/* reset */
+.reset{
+    border-radius: 50px;
+    width: 72px;
+    height: 72px;
+    background-color: var(--banckgroundDiv);
+    border: 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.containerReset{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0px 0px 0px;
+    
+
+}
+
+/* scale nasheee */
+.scale:hover{
+    transform: scale(1.1);
+}
+
+.scale{
+    transition: transform 0.2s ease 0s;
+}
+
+
+/* footer */
+.footer{
+    max-height: 60px;
+    height: 60px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.iconGithub{
+    max-width: 48px;
+    max-height: 48px;
+    width: 48px;
+    height: 48px;
+}
+
+
+/* nashe */
+.prueba{
+    display: flex;
+   
+    
+    margin: 33px 0px 0px 0px;
+}
+
+
+.containerMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
